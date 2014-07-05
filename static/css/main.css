@@ -150,9 +150,14 @@ body {
     color:#FFFFFF;
 }
 
+.whiteborder {
+    background-color:#FFFFFF;
+    border:1px solid white;
+}
 
-=======
->>>>>>> 7ca50f3514f44d61303ac4621354a9053c7f4f68
+.poster {
+    border:1px solid #EFEEE7;
+}
 /* DISPLAY */
 .table {display: table;}
 /* COLORS */
@@ -160,6 +165,7 @@ body {
 .bgblue {background-color:#2b9cbd;}
 .w {color:#FFF;}
 .blue {color:#2b9cbd;}
+.bglightgray {background-color:#EFEEE7;}
 
 /* FONT */
 .bold {font-weight:bold;}
@@ -172,10 +178,7 @@ body {
 .mt10 {margin-top:10px;}
 .m10 {margin:10px;}
 .p5 {padding:5px;}
-<<<<<<< HEAD
 .pl5 {padding-left:5px;}
-=======
->>>>>>> 7ca50f3514f44d61303ac4621354a9053c7f4f68
 .p10 {padding:10px;}
 .pt10 {padding-top:10px;}
 .pl10 {padding-left:10px;}
