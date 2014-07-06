@@ -185,6 +185,15 @@ body {
     border-radius: 2px;
     width:200px;
 }
+
+.createTitle, .createContent {
+    width:200px;
+}
+
+.createContent {
+    height:100px;
+}
+
 /* DISPLAY */
 .table {display: table;}
 /* COLORS */
