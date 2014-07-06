@@ -6,6 +6,7 @@ from newthread import newthread
 
 app = Flask(__name__)
 app.debug = True
+
 app.register_blueprint(index)
 app.register_blueprint(login)
 app.register_blueprint(register)
