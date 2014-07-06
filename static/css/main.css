@@ -158,6 +158,26 @@ body {
 .poster {
     border:1px solid #EFEEE7;
 }
+
+.postBox {
+    color:#ffe;
+    border:2px solid #EFEEE7;
+}
+.resizeBox {
+    background-color:#ffe;
+    width:755px;
+    height:50px;
+    border:0;
+}
+
+.button {
+    text-align: center;
+    padding: 10px 50px;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    color: #FAFAFA;
+    background-color: gray;
+}
 /* DISPLAY */
 .table {display: table;}
 /* COLORS */
@@ -185,4 +205,11 @@ body {
 .w20p {width:20%;}
 .w40p {width:40%;}
 .w60p {width:60%;}
+
+.inline {display:inline-block;}
+/* BBCODE */
+.linkAdd {background-image:url('../img/ico/link_add.png') no-repeat;}
+.boldIco {background-image:url('../img/ico/text_bold.png') no-repeat}
+.italicsIco {background-image:url('../img/ico/text_italics.png') no-repeat}
+.underlineIco {background-image:url('../img/ico/text_underline.png') no-repeat}
 
