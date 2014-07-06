@@ -62,7 +62,7 @@ body {
 	width:100%;	
 }
 
-.forumTitle, .threadTitle{
+.forumTitle{
 	border:1px solid #2b9cbd;
 	font-weight:bolder;
 	font-size:16px; 
@@ -110,7 +110,6 @@ body {
 
 .post {line-height: 1.6em;}
 
-<<<<<<< HEAD
 .pages {
     border:1px solid #2b9cbd;
 	font-weight:bolder;
@@ -119,7 +118,7 @@ body {
 }
 
 .replies {
-    font-size:16px;
+    font-size:12px;
 }
 
 .pageNumber {
@@ -177,6 +176,14 @@ body {
     border-radius: 2px;
     color: #FAFAFA;
     background-color: gray;
+}
+
+.form-input {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #336699;
+    border-radius: 2px;
+    width:200px;
 }
 /* DISPLAY */
 .table {display: table;}
