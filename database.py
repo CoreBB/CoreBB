@@ -1,7 +1,7 @@
 import pymongo
 import config
 import time
-from bsom import ObjectId
+from bson import ObjectId
 
 db = pymongo.MongoClient(config.dbhost, config.port).corebb
 
