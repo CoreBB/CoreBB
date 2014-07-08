@@ -6,36 +6,38 @@
             <div class="bgblue w mt10 p10">
                 <div class="forumTitle">CoreBB Login</div>
             </div>
-            <table class="forums">
-                <tr>
-                    <td class="w40p"><label>Username: </label></td>
-                    <td class="w60p"><input class="form-input" type="text" name="username"/></td>
-                </tr>
-                <tr>
-                    <td class="lb" colspan="2"></td>
-                </tr>
-                <tr>
-                    <td class="w40p"><label>Password: </label></td>
-                    <td class="w60p"><input class="form-input" type="password" name="password"/></td>
-                </tr>
-
-                <tr>
-                    <td class="w40p"></td>
-                    <td class="w60p"><label><input type="checkbox" name="rememberme"/> Remember me</label></td>
-                </tr>
-
-                <tr>
-                    <div class="bggray">
+            <form method="POST">
+                <table class="forums">
+                    <tr>
+                        <td class="w40p"><label>Username: </label></td>
+                        <td class="w60p"><input class="form-input" type="text" name="username"/></td>
+                    </tr>
+                    <tr>
+                        <td class="lb" colspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td class="w40p"><label>Password: </label></td>
+                        <td class="w60p"><input class="form-input" type="password" name="password"/></td>
+                    </tr>
+    
+                    <tr>
                         <td class="w40p"></td>
-                        <td class="w60p"><input class="button" type="submit" name="submit"/></td>
-                    </div>
-                </tr>
-                <tr>
-                    <div class="loginForm">
-                    
-                    </div>
-                <tr>
-                    <td class="lb" colspan="3"></td>
-                </tr>
-            </table>
+                        <td class="w60p"><label><input type="checkbox" name="rememberme"/> Remember me</label></td>
+                    </tr>
+    
+                    <tr>
+                        <div class="bggray">
+                            <td class="w40p"></td>
+                            <td class="w60p"><input class="button" type="submit" name="submit"/></td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <div class="loginForm">
+                        
+                        </div>
+                    <tr>
+                        <td class="lb" colspan="3"></td>
+                    </tr>
+                </table>
+            </form>
 {% endblock %}
