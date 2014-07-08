@@ -4,7 +4,7 @@
     <meta name="author" content="Flux User" >
     <meta name="description" content="My Website" >
     <meta name="keywords" content="Flux, Mac" >
-    <link href="static/css/main.css" rel="stylesheet" media="screen" type="text/css" >
+    <link href="{{ url_for('static', filename='css/main.css')}}" rel="stylesheet" media="screen" type="text/css" >
     <title>My Webpage</title>
     </head>
     <body>
@@ -19,7 +19,7 @@
                         <div class="description pl10">Put your forum description here</div>
                     </div>
                 </div>
-                <div class="links w p10" >FORUM &middot; LOGIN &middot; SIGNUP</div>
+                <div class="links w p10" >FORUM &middot; LOGIN &middot; <a class="headerLink" href="/register">SIGNUP</a></div>
             </div>
     
             {% block content %}

@@ -24,6 +24,10 @@ body {
 	
 }
 
+.headerLink {
+    color:#FFFFFF;
+    text-decoration: none;
+}
 .logoData {
     padding-left: 10px;
     

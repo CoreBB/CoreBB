@@ -2,11 +2,11 @@ from flask import Blueprint, request, render_template, redirect, session, flash
 from utils import protect
 import database
 
-register = Blueprint(__name__, "register")
+register = Blueprint("register",__name__)
 
 @register.route("/register/", methods=["GET", "POST"])
 def page():
-    if "login" in register:
+    if "login" in session:
         return redirect("/")
 
     if request.method == "POST":
