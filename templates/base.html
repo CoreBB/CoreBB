@@ -19,7 +19,17 @@
                         <div class="description pl10">Put your forum description here</div>
                     </div>
                 </div>
-                <div class="links w p10" >FORUM &middot; <a class="headerLink" href="/login">LOGIN</a> &middot; <a class="headerLink" href="/register">SIGNUP</a></div>
+                <div class="links w p10" >FORUM &middot; 
+                	{% if "login" not in session %}
+                	<a class="headerLink" href="/login">LOGIN</a> &middot; <a class="headerLink" href="/register">SIGNUP</a>
+                
+                	{% else %}
+                	
+                	<a class="headerLink" href="/messages">MESSAGES</a> &middot;
+                	<a class="headerLink" href="/usercp">USER CP</a> 
+                	
+                	{% endif %}
+                </div>
             </div>
     
             {% block content %}
