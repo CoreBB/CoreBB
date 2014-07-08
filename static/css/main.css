@@ -37,7 +37,10 @@ body {
 	background-color:#2b9cbd;
 }
 
-.name {
+.blacklink {	
+
+	color: #333;
+	text-decoration: none;
 	
 }
 .links {
