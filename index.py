@@ -1,6 +1,6 @@
 from flask import Blueprint, request, render_template, redirect, session
 
-index = Blueprint(__name__ "index")
+index = Blueprint("index", __name__)
 
 @index.route("/", methods=["GET", "POST"])
 def page():
