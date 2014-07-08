@@ -1,7 +1,10 @@
 import pymongo
 import config
+import random
 import time
+import string
 from bson import ObjectId
+
 
 db = pymongo.MongoClient(config.dbhost, config.port).corebb
 

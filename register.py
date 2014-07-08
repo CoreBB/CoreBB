@@ -10,7 +10,7 @@ def page():
         return redirect("/")
 
     if request.method == "POST":
-        username = reqeust.form['username']
+        username = request.form['username']
         password = protect(request.form['password'])
         confirm = protect(request.form['cpassword'])
         email = request.form['email']
