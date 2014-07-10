@@ -25,16 +25,28 @@ def getOnlineUsers():
             online.append(member)
     return online
 
-def getPosts():
-    return [post for post in db.posts.find()]
+def getPosts(threadId):
+    return [post for post in db.posts.find({"threadId":threadId)]
 
-def getPost(postid):
-    return db.posts.find_one({"_id":ObjectId(postid)})    
+def getPost(_id):
+    return db.posts.find_one({"_id":ObjectId(_id)})    
+
+def getThreads(section):
+    return [thread for thread in db.threads.find({"section":section})]
+
+def getThread(section, _id):
+    return db.posts.find_one({"_id":ObjectId(_id), "section":section})
 
 def getUserField(username, field):
     check = getUser(username)
     if field not in check:
         updateUser(username, {field:[]}) # Default as array which is also None
+
+def makeThread(username, content, section, title):
+    db.threads.insert({"username":username, "title":title, "body":content, "section":section, "lastpost":time.time()})
+
+def makePost(username, content, threadId):
+    db.posts.insert({"username":username, "body":content, "threadId":threadId})
 
 def insert(into, data):
     db[into].insert(data)
@@ -58,7 +70,7 @@ def register(username, password, email, dob, referrer):
         referrals.append(username)
         updateUser(referrer, {"referrals":referrals})
     
-    insert("members", {"username":username, "password":password, "email":email, "timestamp":time.time(), "lastonline":time.time(), "referrals":[]})
+    insert("members", {"username":username, "password":password, "email":email, "timestamp":time.time(), "lastonline":time.time(), "referrals":[], "group":"Users"})
 
     return {"success":True, "message":"Registeration successful!"}
 
