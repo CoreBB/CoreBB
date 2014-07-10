@@ -1,4 +1,4 @@
-from flask import Blueprint, flash, render_template, redirect, request
+from flask import Blueprint, flash, render_template, redirect, request, session
 import database
 
 threaddisplay = Blueprint(__name__, "threaddisplay")
