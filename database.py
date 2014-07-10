@@ -26,7 +26,7 @@ def getOnlineUsers():
     return online
 
 def getPosts(threadId):
-    return [post for post in db.posts.find({"threadId":threadId)]
+    return [post for post in db.posts.find({"threadId":threadId})]
 
 def getPost(_id):
     return db.posts.find_one({"_id":ObjectId(_id)})    
