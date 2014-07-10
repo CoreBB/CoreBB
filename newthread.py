@@ -1,4 +1,4 @@
-from flask import Blueprint, redirect, render_template, request, flash
+from flask import Blueprint, redirect, render_template, request, flash, session
 import database
 
 newthread = Blueprint(__name__, "newthread")
