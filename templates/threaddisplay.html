@@ -12,7 +12,7 @@
                         <div class="avatar"><img src="http://placehold.it/150x150"/></div>
                         
                         <div class="userinfo pl10">
-                            <div class="username"><a href="#" class="blue">Pillows</a></div>
+                            <div class="username"><a href="#" class="blue">{{ thread["username"] }}</a></div>
                             <div class="usertitle">Administrator</div>
                         </div>
                     </div>
@@ -70,19 +70,19 @@
                     </div>
                     
                     <div class="pageList bggray p10">
-                        <div class="linkAdd inline"><img src="static/img/ico/link_add.png"/></div>
-                        <div class="boldIco inline"><img src="static/img/ico/text_bold.png"/></div>
-                        <div class="italicsIco inline"><img src="static/img/ico/text_italic.png"/></div>
-                        <div class="underlineIco inline"><img src="static/img/ico/text_underline.png"/></div>
-                        <div class="happy inline"><img src="static/img/ico/emoticon_happy.png"/></div>
-                        <div class="grin inline"><img src="static/img/ico/emoticon_grin.png"/></div>
-                        <div class="evilgrin inline"><img src="static/img/ico/emoticon_evilgrin.png"/></div>
-                        <div class="smile inline"><img src="static/img/ico/emoticon_smile.png"/></div>
-                        <div class="surprised inline"><img src="static/img/ico/emoticon_surprised.png"/></div>
-                        <div class="tongue inline"><img src="static/img/ico/emoticon_tongue.png"/></div>
-                        <div class="unhappy inline"><img src="static/img/ico/emoticon_unhappy.png"/></div>
-                        <div class="waii inline"><img src="static/img/ico/emoticon_waii.png"/></div>
-                        <div class="wink inline"><img src="static/img/ico/emoticon_wink.png"/></div>
+                        <div class="linkAdd inline"><img src="{{ url_for('static', filename='img/ico/link_add.png')}}"/></div>
+                        <div class="boldIco inline"><img src="{{ url_for('static', filename='img/ico/text_bold.png')}}"/></div>
+                        <div class="italicsIco inline"><img src="{{ url_for('static', filename='img/ico/text_italic.png')}}"/></div>
+                        <div class="underlineIco inline"><img src="{{ url_for('static', filename='img/ico/text_underline.png')}}"/></div>
+                        <div class="happy inline"><img src="{{ url_for('static', filename='img/ico/emoticon_happy.png')}}"/></div>
+                        <div class="grin inline"><img src="{{ url_for('static', filename='img/ico/emoticon_grin.png')}}"/></div>
+                        <div class="evilgrin inline"><img src="{{ url_for('static', filename='img/ico/emoticon_evilgrin.png')}}"/></div>
+                        <div class="smile inline"><img src="{{ url_for('static', filename='img/ico/emoticon_smile.png')}}"/></div>
+                        <div class="surprised inline"><img src="{{ url_for('static', filename='img/ico/emoticon_surprised.png')}}"/></div>
+                        <div class="tongue inline"><img src="{{ url_for('static', filename='img/ico/emoticon_tongue.png')}}"/></div>
+                        <div class="unhappy inline"><img src="{{ url_for('static', filename='img/ico/emoticon_unhappy.png')}}"/></div>
+                        <div class="waii inline"><img src="{{ url_for('static', filename='img/ico/emoticon_waii.png')}}"/></div>
+                        <div class="wink inline"><img src="{{ url_for('static', filename='img/ico/emoticon_wink.png')}}"/></div>
                     </div>
                     
                     <div class="postBox mt5">
