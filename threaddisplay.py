@@ -10,8 +10,6 @@ def post(section, _id):
 
     thread = database.getThread(section, _id)
     posts = database.getPosts(_id)
-    op = thread["body"] #Find a better name for this variable?
-    title = thread["title"]
     
     # Am I missing something?
     if request.method == "POST":
