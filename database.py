@@ -46,7 +46,7 @@ def makeThread(username, content, section, title):
     db.threads.insert({"username":username, "title":title, "body":content, "section":section, "lastpost":time.time()})
 
 def makePost(username, content, threadId):
-    db.posts.insert({"username":username, "body":content, "threadId":threadId})
+    db.posts.insert({"username":username, "body":content, "threadId":threadId, "timestamp":time.time()})
 
 def insert(into, data):
     db[into].insert(data)
