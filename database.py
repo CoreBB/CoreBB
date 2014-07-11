@@ -36,7 +36,11 @@ def getThreads(section):
 
 def getThread(section, _id):
     return db.threads.find_one({"_id":ObjectId(_id), "section":section})
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 5bc1d7f1265147a046a03d930d54b23c6d9804e7
 def getUserField(username, field):
     check = getUser(username)
     if field not in check:
@@ -46,7 +50,7 @@ def makeThread(username, content, section, title):
     db.threads.insert({"username":username, "title":title, "body":content, "section":section, "lastpost":time.time()})
 
 def makePost(username, content, threadId):
-    db.posts.insert({"username":username, "body":content, "threadId":threadId})
+    db.posts.insert({"username":username, "body":content, "threadId":threadId, "timestamp":time.time()})
 
 def insert(into, data):
     db[into].insert(data)
