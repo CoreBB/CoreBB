@@ -3,7 +3,7 @@ import database
 
 threaddisplay = Blueprint(__name__, "threaddisplay")
 
-@threaddisplay.route("/thread/<section>/<_id>")
+@threaddisplay.route("/thread/<section>/<_id>", methods=['GET', 'POST'])
 def post(section, _id):
     if "login" not in session:
         return redirect("/")
@@ -20,4 +20,4 @@ def post(section, _id):
         database.makePost(username, content, _id)
         return redirect("/thread/" + section + "/" + _id)
     else:
-        return render_template("threaddisplay.html", op=op, posts=posts,title=title)
+        return render_template("threaddisplay.html", thread=thread, posts=posts)
