@@ -10,5 +10,14 @@ def post(section, _id):
 
     thread = database.getThread(section, _id)
     posts = database.getPosts(_id)
-
-    return render_template("threaddisplay.html", thread=thread, posts=posts)
+    op = thread["body"] #Find a better name for this variable?
+    title = thread["title"]
+    
+    # Am I missing something?
+    if request.method == "POST":
+        username = thread["username"]
+        content = request.form["content"]
+        database.makePost(username, content, _id)
+        return redirect("/thread/" + section + "/" + _id)
+    else:
+        return render_template("threaddisplay.html", op=op, posts=posts,title=title)

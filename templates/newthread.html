@@ -6,35 +6,37 @@
             <div class="bgblue w mt10 p10">
                 <div class="forumTitle">Create a new thread</div>
             </div>
-            <table class="forums">
-                <tr>
-                    <td class="w30p ">
-                        <label>Title: </label>
-                    </td>
-                    <td>
-                        <input type="text" name="title" class="form-input createTitle"/>
-                    
+            <form method="POST">
+                <table class="forums">
+                    <tr>
+                        <td class="w30p ">
+                            <label>Title: </label>
+                        </td>
+                        <td>
+                            <input type="text" name="title" class="form-input createTitle"/>
                         
-                    </td>
-                </tr>
-                <tr>
-                    <td class="w20p inline">
-                        <label class="inline">Message: </label>
-                    </td>
-                    <td>
-                        <textarea type="text" name="message" class="form-input createContent"></textarea>
-                    
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="w20p inline">
+                            <label class="inline">Message: </label>
+                        </td>
+                        <td>
+                            <textarea type="text" name="message" class="form-input createContent"></textarea>
                         
-                    </td>
-                </tr>
-                <tr>
-                    <div class="bggray">
-                        <td></td>
-                        <td ><input class="button" type="submit" name="submit"/></td>
-                    </div>
-                </tr>
-                <tr>
-                    <td class="lb" colspan="3"></td>
-                </tr>
-            </table>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <div class="bggray">
+                            <td></td>
+                            <td ><input class="button" type="submit" name="submit"/></td>
+                        </div>
+                    </tr>
+                    <tr>
+                        <td class="lb" colspan="3"></td>
+                    </tr>
+                </table>
+            </form>
 {% endblock %}

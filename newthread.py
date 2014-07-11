@@ -3,16 +3,16 @@ import database
 
 newthread = Blueprint(__name__, "newthread")
 
-@newthread.route("/newthread/<section>")
+@newthread.route("/newthread/<section>",methods=["GET","POST"])
 def page(section):
     if "login" not in session:
         return redirect("/")
     
     if request.method == "POST":
         title = request.form['title']
-        body = request.form['body']
-        database.makeThread(session['login'], body, section, title)
-        flash("Post made")
+        message = request.form['message']
+        database.makeThread(session['login'], message, section, title)
+        #flash("Post made") Don't need a flash as they won't see it anyways
         return redirect("/newthread/{0}".format(section))
 
     return render_template("newthread.html")
