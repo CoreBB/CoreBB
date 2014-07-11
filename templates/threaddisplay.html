@@ -4,7 +4,7 @@
                 <a href="" class="topLink">Signup to start participating</a> or <a href="" class="topLink"> Login here</a>!
             </div>
             <div class="bgblue w mt10 p10">
-                <div class="threadTitle">{{ title }}</div>
+                <div class="threadTitle">{{ thread["title"] }}</div>
             </div>
             <table class="forums">
                 <tr class="">
@@ -19,7 +19,7 @@
                 </tr>
                 
                 <tr>
-                    <div class="post pt10">{{ op }}</div>
+                    <div class="post pt10">{{ thread["body"] }}</div>
                 </tr>
                 
                 <tr>
@@ -43,37 +43,26 @@
                 </tr>
                 
                 <!-- Single Post Block -->
+                {% for post in posts %}
                 <tr>
                     <div class="poster bglightgray p10 mt10">
                         <div class=" op table">
                             <div class="avatar"><img src="http://placehold.it/150x150"/></div>
                             
                             <div class="userinfo pl10">
-                                <div class="username "><a href="#" class="blue">Pillows</a></div>
+                                <div class="username "><a href="#" class="blue">{{ post["username"] }}</a></div>
                                 <div class="usertitle">Administrator</div>
                             </div>
                         </div>
     
-                        <div class="post pt10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis enim sed purus elementum laoreet et nec diam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam dolor diam, egestas nec sodales at, commodo id odio. Praesent et ante quis velit feugiat ultrices. Morbi diam enim, rhoncus a volutpat ac, ornare sit amet mauris. Vivamus cursus odio eu mi aliquam accumsan. Quisque nec justo mauris. Integer et neque varius, ultrices risus quis, lacinia ipsum. Aenean laoreet, sem sit amet rhoncus dictum, metus metus dictum tortor, vitae sollicitudin nibh felis vitae nibh. Donec tristique est ac nunc tincidunt, nec bibendum orci congue. Nulla mattis egestas enim. Nunc pulvinar, odio at ullamcorper dictum, elit orci dictum nisi, eget ullamcorper turpis leo a arcu. Etiam congue iaculis ipsum, a fringilla arcu condimentum quis. Aenean turpis purus, commodo in feugiat ut, posuere ut metus.
-                        </div>
+                        <div class="post pt10"> {{ post["body"] }}                        </div>
                     </div>
                 </tr>
+                
+                {% endfor %}
                 <!-- Post block ends -->
                 
                 <tr>
-                    <div class="poster bglightgray p10 mt10">
-                        <div class=" op table">
-                            <div class="avatar"><img src="http://placehold.it/150x150"/></div>
-                            
-                            <div class="userinfo pl10">
-                                <div class="username "><a href="#" class="blue">Pillows</a></div>
-                                <div class="usertitle">Administrator</div>
-                            </div>
-                        </div>
-    
-                        <div class="post pt10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer facilisis enim sed purus elementum laoreet et nec diam. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam dolor diam, egestas nec sodales at, commodo id odio. Praesent et ante quis velit feugiat ultrices. Morbi diam enim, rhoncus a volutpat ac, ornare sit amet mauris. Vivamus cursus odio eu mi aliquam accumsan. Quisque nec justo mauris. Integer et neque varius, ultrices risus quis, lacinia ipsum. Aenean laoreet, sem sit amet rhoncus dictum, metus metus dictum tortor, vitae sollicitudin nibh felis vitae nibh. Donec tristique est ac nunc tincidunt, nec bibendum orci congue. Nulla mattis egestas enim. Nunc pulvinar, odio at ullamcorper dictum, elit orci dictum nisi, eget ullamcorper turpis leo a arcu. Etiam congue iaculis ipsum, a fringilla arcu condimentum quis. Aenean turpis purus, commodo in feugiat ut, posuere ut metus.
-                        </div>
-                    </div>
                     
                     <div class="pages bgblue mt10 w p5 pl5">
                         <div class="replies bold">Comments</div>
