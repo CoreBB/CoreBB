@@ -36,11 +36,7 @@ def getThreads(section):
 
 def getThread(section, _id):
     return db.threads.find_one({"_id":ObjectId(_id), "section":section})
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 5bc1d7f1265147a046a03d930d54b23c6d9804e7
 def getUserField(username, field):
     check = getUser(username)
     if field not in check:
