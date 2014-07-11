@@ -35,7 +35,7 @@ def getThreads(section):
     return [thread for thread in db.threads.find({"section":section})]
 
 def getThread(section, _id):
-    return db.posts.find_one({"_id":ObjectId(_id), "section":section})
+    return db.threads.find_one({"_id":ObjectId(_id), "section":section})
 
 def getUserField(username, field):
     check = getUser(username)
