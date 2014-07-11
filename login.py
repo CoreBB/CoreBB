@@ -7,7 +7,7 @@ login = Blueprint(__name__, "login")
 @login.route("/login/", methods=['GET', 'POST'])
 def page():
     if "login" in session:
-        return redrect("/")
+        return redirect("/")
 
     if request.method == "POST":
         username = request.form['username']
